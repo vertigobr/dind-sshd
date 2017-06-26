@@ -9,8 +9,10 @@ RUN apk --update add openssh python sudo shadow && \
     /usr/bin/ssh-keygen -A
 ADD src/*.sh /opt/
 RUN adduser -D -u 5001 user && \
+    groupadd docker && \
     usermod -G wheel user && \
-    echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers && \
+    usermod -G docker user && \
+    echo "user ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers && \
     sed -i s/^#PasswordAuthentication.*/PasswordAuthentication\ yes/ /etc/ssh/sshd_config && \
     chmod +x /opt/*.sh
 
