@@ -1,4 +1,4 @@
-stable-dind
+latest
 #
 # Apenas a *primeira* linha deste arquivo é lida nos scripts de build
 # para determinar a tag da imagem a ser aplicada.
@@ -6,3 +6,4 @@ stable-dind
 # histórico de tags: 
 #
 latest
+stable-dind
