@@ -5,8 +5,9 @@ FROM docker:stable-dind
 
 LABEL maintainer andre@vertigo.com.br
 
-RUN apk --update add openssh python sudo shadow && \
-    /usr/bin/ssh-keygen -A
+RUN apk --update add openssh python sudo shadow py-pip && \
+    /usr/bin/ssh-keygen -A && \
+    pip install docker
 ADD src/*.sh /opt/
 RUN adduser -D -u 5001 user && \
     groupadd docker && \
