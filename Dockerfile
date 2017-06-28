@@ -5,7 +5,7 @@ FROM docker:stable-dind
 
 LABEL maintainer andre@vertigo.com.br
 
-RUN apk --update add openssh python sudo shadow py-pip && \
+RUN apk --update add openssh python sudo shadow py-pip curl && \
     /usr/bin/ssh-keygen -A && \
     pip install docker docker-compose
 ADD src/*.sh /opt/
