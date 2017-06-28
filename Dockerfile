@@ -7,7 +7,7 @@ LABEL maintainer andre@vertigo.com.br
 
 RUN apk --update add openssh python sudo shadow py-pip curl && \
     /usr/bin/ssh-keygen -A && \
-    pip install docker docker-compose
+    pip install --upgrade docker docker-compose
 ADD src/*.sh /opt/
 RUN adduser -D -u 5001 user && \
     groupadd docker && \
