@@ -40,5 +40,5 @@ fi
 # fix owner
 chown -R user:wheel /home/user/.ssh
 nohup /usr/sbin/sshd -D -e &
-exec /usr/local/bin/dockerd-entrypoint.sh
+exec /usr/local/bin/dockerd-entrypoint.sh "$@"
 
