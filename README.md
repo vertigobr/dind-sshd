@@ -3,7 +3,7 @@ Docker-in-docker with SSHD
 
 ## How to use
 
-(based on vertigo/tiny-sshd)
+Based on vertigo/tiny-sshd. Check its docs in order to learn how to use it both pwd or pwdless.
 
 ## Why?
 
